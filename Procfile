@@ -1,1 +1,1 @@
-web: gunicorn 'hngapp.wsgi'
+web: gunicorn hngapp.wsgi --log-file -
