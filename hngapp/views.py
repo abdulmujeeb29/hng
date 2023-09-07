@@ -22,8 +22,8 @@ def get_info(request):
         "current_day" :current_day,
         "utc_time": utc_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
         "track" : track,
-        "github_file_url": "",
-        "github_repo_url" : "",
+        "github_file_url": "https://github.com/abdulmujeeb29/hng/blob/main/hngapp/views.py",
+        "github_repo_url" : "https://github.com/abdulmujeeb29/hng",
         "status_code" : 200
         
 
