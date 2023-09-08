@@ -30,3 +30,8 @@ def get_info(request):
     }
 
     return JsonResponse(response)
+
+
+
+def index(request):
+    return HttpResponse("Welcome Nigguh")
