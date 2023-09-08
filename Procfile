@@ -1,1 +1,0 @@
-web: gunicorn hngapp.wsgi --log-file -
