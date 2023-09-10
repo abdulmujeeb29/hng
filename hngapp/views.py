@@ -8,7 +8,8 @@ def get_info(request):
     track = request.GET.get('track', '')
 
     current_day = datetime.now().strftime('%A')
-    utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%H:%SZ")
+    utc_time = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")
+
     # utc_time = datetime.utcnow()
     validated_time = 'True'
 
