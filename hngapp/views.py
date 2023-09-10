@@ -8,11 +8,12 @@ def get_info(request):
     track = request.GET.get('track', '')
 
     current_day = datetime.now().strftime('%A')
-    utc_time = datetime.utcnow()
+    utc_time = datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%H:%SZ")
+    # utc_time = datetime.utcnow()
     validated_time = 'True'
 
-    if validated_time:
-        utc_time += timedelta(minutes=2)
+    # if validated_time:
+    #     utc_time += timedelta(minutes=2)
 
     github_file_url =''
     github_repo_url =''
@@ -20,7 +21,7 @@ def get_info(request):
     response = {
         "slack_name" : slack_name,
         "current_day" :current_day,
-        "utc_time": utc_time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+        "utc_time": utc_time,
         "track" : track,
         "github_file_url": "https://github.com/abdulmujeeb29/hng/blob/main/hngapp/views.py",
         "github_repo_url" : "https://github.com/abdulmujeeb29/hng",
