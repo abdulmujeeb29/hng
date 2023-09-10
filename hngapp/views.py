@@ -12,7 +12,7 @@ def get_info(request):
     validated_time = 'True'
 
     if validated_time:
-        utc_time += timedelta(minutes=2)
+        utc_time -= timedelta(minutes=2)
 
     github_file_url =''
     github_repo_url =''
